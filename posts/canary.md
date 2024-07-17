@@ -85,12 +85,12 @@ There's a lot to say, but I'll distill it down to three points:
 
 ## Tiny components that works anywhere
 
-Canary use [Web components](https://developer.mozilla.org/en-US/docs/Web/Web_Components), so browser know how to render it. No need to bundle entire React or something. It just works anywhere.
+Canary use [Web components](https://developer.mozilla.org/en-US/docs/Web/Web_Components), so browsers know how to render it. No need to bundle entire React or something. It just works anywhere.
 
 All components come with almost zero dependencies, and you can only load subset of them that you need.
 For example, you can have only **Search**, only **Ask**, or both. You can add [callouts](#example-1-popup-based-on-user-intent), or just remove them.
 
-And \*\*even if you load them ALL, it's still 5-10X smaller than other solutions.
+And even if you load them ALL, it's still **5-10X smaller** than other solutions.
 
 |             | **Canary**                                                            | Other 1                                                            | Other 2                                                             | Other 3                                                 |
 | ----------- | --------------------------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------- | ------------------------------------------------------- |
@@ -131,9 +131,9 @@ It looks like this:
 
 Detailed docs can be found [here](https://docs.getcanary.dev/intro/concepts), but we will cover some of them here.
 
-### Example 1: Popup based on user intent
+### Example 1: Callout based on user intent
 
-Since search bar is where you capture user's intent, there's many ways to optimize for your use-case.
+Since search bar is where you capture user's intent, there's many ways to optimize for specific use-case.
 `Callout` is one example of this.
 
 Let's say your product is open-core, and you're particularly interested in users who want to use **enterprise** features that require paid license.
@@ -261,4 +261,4 @@ If you are working on a small project, using local providers like `canary-provid
 
 # Before you go
 
-[Star us on GitHub](https://github.com/fastrepl/canary) for support, join our [Discord](https://discord.gg/canarydev) to ask questions, and [schedule a call](https://cal.com/yujonglee/canary) if you like to chat.
+[Star us on GitHub](https://github.com/fastrepl/canary) to support, join our [Discord](https://discord.gg/canarydev) to ask questions, and [schedule a call](https://cal.com/yujonglee/canary) if you like to chat.
