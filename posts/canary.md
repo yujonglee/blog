@@ -54,7 +54,7 @@ Large companies often have something custom. For example, **Stripe**, known for 
 <em>Screenshot from Stripe's documentation (2)</em>
 </p>
 
-And these days, since **Ask AI** is powerful for large documentation, even startups try to roll out their own.
+And since **Ask AI** is so powerful for large documentation, even startups try to roll out their own.
 
 For example, [OpenReplay](https://openreplay.com), which provides self-hostable session-reply, use Algolia for their documentation. But apparently they built custom **Ask AI** since Algolia is not able to be customized for their needs.
 
@@ -81,7 +81,7 @@ There's a lot to say, but I'll distill it down to three points:
 
 - [Tiny components that works anywhere](#tiny-components-that-works-anywhere)
 - [Modular and open-source](#modular-and-open-source)
-- [More than a UI components](#more-than-a-ui-components)
+- [More than UI components](#more-than-a-ui-components)
 
 ## Tiny components that works anywhere
 
@@ -129,7 +129,7 @@ It looks like this:
 - `canary-search-*`: Optional, works with local provider.
 - `canary-ask-*`: Optional, to add "Ask AI". Need cloud provider.
 
-Detailed docs can be found [here](https://docs.getcanary.dev/intro/concepts), but we will cover some of them here.
+Detailed docs can be found [here](https://docs.getcanary.dev/intro/concepts), but we will cover some of them below.
 
 ### Example 1: Callout based on user intent
 
@@ -219,7 +219,7 @@ If you want to use Canary, chances are you already have a documentation website,
 
 Since each documentation comes with its own style, and you've already configured your own theme, you often want the search bar to simply match your existing style.
 
-For this, Canary provides sets of style wrappes that read [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) from your theme, transform them, and apply to the Canary components.
+For this, Canary provides sets of style wrappers that read [CSS variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties) from your theme, transform them, and apply to the Canary components.
 
 ```html
 <canary-styles-starlight>
@@ -233,7 +233,7 @@ You can find the styling guides [here](https://docs.getcanary.dev/integrations/s
 
 Examples shown above are all prebuilt components. But again, these are [open-source](https://github.com/fastrepl/canary) [web-components](https://developer.mozilla.org/en-US/docs/Web/Web_Components). It is trivial to build yours and swap them out. (or even contribute to the project!)
 
-## More than a UI components
+## More than UI components
 
 ```diff
 # your-search-bar.html
@@ -261,4 +261,6 @@ If you are working on a small project, using local providers like `canary-provid
 
 # Before you go
 
-[Star us on GitHub](https://github.com/fastrepl/canary) to support, join our [Discord](https://discord.gg/canarydev) to ask questions, and [schedule a call](https://cal.com/yujonglee/canary) if you like to chat.
+- [Star us on GitHub](https://github.com/fastrepl/canary) to support,
+- Join our [Discord](https://discord.gg/canarydev) to ask questions,
+- [Schedule a call](https://cal.com/yujonglee/canary) if you like to chat.

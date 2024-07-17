@@ -1,7 +1,7 @@
 {
   "tasks": {
     "dev": "deno run --allow-net --allow-read --allow-env=NODE_DEBUG --watch --no-check main.js --dev",
-    "deploy": "deployctl deploy --project=yujonglee main.js"
+    "deploy": "deployctl deploy --project=yujonglee main.js --prod"
   },
   "deploy": {
     "project": "8ad35858-c81b-4dd8-b59b-8b01ee04cda6",
