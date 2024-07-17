@@ -32,11 +32,11 @@ Non-commercial projects usually use local search comes with documentation framew
 
 Also, since it has to build and send search index to the browser, it is not ideal for large documentation.
 
-> Canary supports both local and clould search via [provider](https://docs.getcanary.dev/intro/concepts#provider) abstraction.
+> Canary supports both local and cloud search via [provider](https://docs.getcanary.dev/intro/concepts#provider) abstraction.
 
 ## Algolia DocSearch
 
-Most of the companies use it. Also, almost every well-known open source project use it too since it is [free for open-source projects](https://docsearch.algolia.com/apply).
+Most of the companies use it. Also, almost every well-known open source project uses it too since it is [free for open-source projects](https://docsearch.algolia.com/apply).
 
 It does the job, but it doesn't have **Ask AI**, nor any way to customize its behavior.
 
@@ -70,14 +70,14 @@ For example, [OpenReplay](https://openreplay.com), which provides self-hostable 
 
 ---
 
-My gut feeling is that more and more companies will invest resources in good search bar. It's not only about **Ask AI**.
-Users are becoming used to describing their needs and receiving immediate results. Search bar will become a important interface for companies to capture and respond to user requests.
+My gut feeling is that more and more companies will invest resources in a good search bar. It's not only about **Ask AI**.
+Users are becoming used to describing their needs and receiving immediate results. Search bar will become an important interface for companies to capture and respond to user requests.
 
 And 🐤 Canary is here to help.
 
 # What's special about Canary?
 
-There's lot to say, but I'll distill it down to three points:
+There's a lot to say, but I'll distill it down to three points:
 
 - [Tiny components that works anywhere](#tiny-components-that-works-anywhere)
 - [Modular and open-source](#modular-and-open-source)
@@ -85,12 +85,12 @@ There's lot to say, but I'll distill it down to three points:
 
 ## Tiny components that works anywhere
 
-Canary use [Web components](https://developer.mozilla.org/en-US/docs/Web/Web_Components), so browser knows how to render it. No need to bundle entire React or something. It just works anywhere.
+Canary use [Web components](https://developer.mozilla.org/en-US/docs/Web/Web_Components), so browser know how to render it. No need to bundle entire React or something. It just works anywhere.
 
 All components come with almost zero dependencies, and you can only load subset of them that you need.
 For example, you can have only **Search**, only **Ask**, or both. You can add [callouts](#example-1-popup-based-on-user-intent), or just remove them.
 
-And **even if you load them ALL, it's still **5-10X** smaller than other solutions.**
+And \*\*even if you load them ALL, it's still 5-10X smaller than other solutions.
 
 |             | **Canary**                                                            | Other 1                                                            | Other 2                                                             | Other 3                                                 |
 | ----------- | --------------------------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------- | ------------------------------------------------------- |
@@ -164,7 +164,7 @@ We currently only support keyword based detection in `search`. But upcoming rele
 
 For developer-facing documentation, it's common for it to grow to hundreds of pages, and already structured in some way. If so, you might want the search bar to adapt to it.
 
-For example, If you have generated, large API reference alongside your hand-written guides, you might want to separate them.
+For example, If you have a generated, large API reference alongside your hand-written guides, you might want to separate them.
 
 For this, you can just replace component assigned to `results` slot.
 
