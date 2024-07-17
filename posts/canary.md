@@ -65,13 +65,13 @@ For example, [OpenReplay](https://openreplay.com), which provides self-hostable 
 
 <p>
 <img src="../images/openreplay-ask.png" width="700" />
-<em>Screenshot from OpenReplay's documentation, Custom "AsK"</em>
+<em>Screenshot from OpenReplay's documentation, Custom "Ask"</em>
 </p>
 
 ---
 
-My gut feeling is that more companies will likely invest in good search bars. It's not only about AI.
-Users are becoming used to describing their needs and receiving immediate results. Search bars will become a important interface for companies to capture and respond to user requests.
+My gut feeling is that more and more companies will invest resources in good search bar. It's not only about **Ask AI**.
+Users are becoming used to describing their needs and receiving immediate results. Search bar will become a important interface for companies to capture and respond to user requests.
 
 And 🐤 Canary is here to help.
 
@@ -87,7 +87,7 @@ There's lot to say, but I'll distill it down to three points:
 
 Canary use [Web components](https://developer.mozilla.org/en-US/docs/Web/Web_Components), so browser knows how to render it. No need to bundle entire React or something. It just works anywhere.
 
-All components come with almost zero dependencies, and you can only load subset of them that you need. 
+All components come with almost zero dependencies, and you can only load subset of them that you need.
 For example, you can have only **Search**, only **Ask**, or both. You can add [callouts](#example-1-popup-based-on-user-intent), or just remove them.
 
 And **even if you load them ALL, it's still **5-10X** smaller than other solutions.**
@@ -107,7 +107,7 @@ It looks like this:
   <canary-provider-mock>
     <canary-modal>
       <canary-trigger-searchbar slot="trigger"></canary-trigger-searchbar>
-      
+
       <canary-content slot="content">
         <canary-search slot="search">
           <canary-search-input slot="input"></canary-search-input>
@@ -129,14 +129,16 @@ It looks like this:
 - `canary-search-*`: Optional, works with local provider.
 - `canary-ask-*`: Optional, to add "Ask AI". Need cloud provider.
 
-Detailed docs can be found [here](https://docs.getcanary.dev/intro/concepts), but we will cover some of the them here.
+Detailed docs can be found [here](https://docs.getcanary.dev/intro/concepts), but we will cover some of them here.
 
 ### Example 1: Popup based on user intent
 
-Since search bar is where you can capture user's intent, there's many ways you want to optimize for your use-case.
+Since search bar is where you capture user's intent, there's many ways to optimize for your use-case.
 `Callout` is one example of this.
 
-Let's say your product is open-core, and you are particularly interested in users who want to use **enterprise** features that require paid license.
+Let's say your product is open-core, and you're particularly interested in users who want to use **enterprise** features that require paid license.
+
+Here's how you would optimize for it:
 
 ```diff
  <canary-search>
@@ -160,7 +162,7 @@ We currently only support keyword based detection in `search`. But upcoming rele
 
 ### Example 2: Adapt to your documentation structure
 
-For developer-facing documentation, it's common for it to grow to hundreds, or even thousands of pages, and already have some structure in your documentation. If you do, you might want the search bar to adapt to it.
+For developer-facing documentation, it's common for it to grow to hundreds of pages, and already structured in some way. If so, you might want the search bar to adapt to it.
 
 For example, If you have generated, large API reference alongside your hand-written guides, you might want to separate them.
 
@@ -179,16 +181,13 @@ For this, you can just replace component assigned to `results` slot.
 
 <p>
 <img src="../images/search-no-group.png" width="700" />
-<em>Using canary-search-results</em>
+<em>Using "canary-search-results"</em>
 </p>
 
 <p>
 <img src="../images/search-group.png" width="700" />
-<em>Using canary-search-results-group</em>
+<em>Using "canary-search-results-group"</em>
 </p>
-
-
-
 
 ### Example 3: Zero friction with built-in wrappers
 
@@ -232,7 +231,7 @@ You can find the styling guides [here](https://docs.getcanary.dev/integrations/s
 
 ---
 
-Examples I showed above are all prebuilt components. But again, these are [open-source](https://github.com/fastrepl/canary) [web-components](https://developer.mozilla.org/en-US/docs/Web/Web_Components). It is trivial to build yours and swap them out. (or even contribute to the project!)
+Examples shown above are all prebuilt components. But again, these are [open-source](https://github.com/fastrepl/canary) [web-components](https://developer.mozilla.org/en-US/docs/Web/Web_Components). It is trivial to build yours and swap them out. (or even contribute to the project!)
 
 ## More than a UI components
 
@@ -262,4 +261,4 @@ If you are working on a small project, using local providers like `canary-provid
 
 # Before you go
 
-[Star us on GitHub](https://github.com/fastrepl/canary) for support, join our [Discord](https://discord.gg/canarydev) and ask questions, 
+[Star us on GitHub](https://github.com/fastrepl/canary) for support, join our [Discord](https://discord.gg/canarydev) to ask questions, and [schedule a call](https://cal.com/yujonglee/canary) if you like to chat.
