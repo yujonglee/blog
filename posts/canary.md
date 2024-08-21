@@ -1,7 +1,9 @@
 ---
-title: "🐤 Canary: Open-source primitives for Building Modern Search Bar"
+title: "🐤 Canary: Open-source primitives for building modern search bar"
 publish_date: 2024-07-17
 ---
+
+> Details changed since the original post, but the core idea is still the same. For up-to-date information, please visit [getcanary.dev](https://getcanary.dev).
 
 Recently, I have been working on [Canary](https://github.com/fastrepl/canary), an open-source project that aims to provide **Search & Ask** utility to documentation sites. This blog post will serve as an overview of the project until we have a proper landing page.
 
@@ -40,6 +42,8 @@ Most of the companies use it. Also, almost every well-known open source project 
 
 It does the job, but it doesn't have **Ask AI**, nor any way to customize its behavior.
 
+> Here, I'm talking about DocSearch UI, not Algolia's search API.
+
 ## Custom
 
 Large companies often have something custom. For example, **Stripe**, known for having some of the best documentation since its early days, has a customized search UI to meet its needs.
@@ -56,7 +60,7 @@ Large companies often have something custom. For example, **Stripe**, known for 
 
 And since **Ask AI** is so powerful for large documentation, even startups try to roll out their own.
 
-For example, [OpenReplay](https://openreplay.com), which provides self-hostable session-reply, use Algolia for their documentation. But apparently they built custom **Ask AI** since Algolia is not able to be customized for their needs.
+For example, [OpenReplay](https://openreplay.com), which provides self-hostable session-reply, use Algolia DocSearch for their documentation. But apparently they built custom **Ask AI** since DocSearch is not able to be customized for their needs.
 
 <p>
 <img src="../images/openreplay-search.png" width="700" />
@@ -85,16 +89,26 @@ There's a lot to say, but I'll distill it down to three points:
 
 ## Tiny components that works anywhere
 
+> Up-to-date numbers are [here](https://getcanary.dev/docs/common/why).
+
 Canary use [Web components](https://developer.mozilla.org/en-US/docs/Web/Web_Components), so browsers know how to render it. No need to bundle entire React or something. It just works anywhere.
 
-All components come with almost zero dependencies, and you can only load subset of them that you need.
+You can only load subset of components that you need.
 For example, you can have only **Search**, only **Ask**, or both. You can add [callouts](#example-1-popup-based-on-user-intent), or just remove them.
 
-And even if you load them ALL, it's still **5-10X smaller** than other solutions.
+<details>
+  <summary>A, B, C, D?</summary>
+  <code>A</code> does search only, <code>B</code> does search and ask, and <code>C</code>  and <code>D</code>  do ask only.
+  To see details about each of them, click the link for each result number.
+</details>
 
-|             | **Canary**                                                            | Other 1                                                            | Other 2                                                             | Other 3                                                 |
-| ----------- | --------------------------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------- | ------------------------------------------------------- |
-| Bundle Size | [**0.16 MB**](https://bundlephobia.com/package/@getcanary/web@latest) | [1.9 MB](https://bundlephobia.com/package/@inkeep/uikit-js@latest) | [0.75 MB](https://bundlephobia.com/package/@mendable/search@latest) | [0.87 MB](https://widget.kapa.ai/kapa-widget.bundle.js) |
+| _Search Only_ | **Canary**                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | A                                                               |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------- |
+| _Bundle Size_ | [**49 KB**](https://bundlejs.com/?q=%40getcanary%2Fweb%40latest%2Fcomponents%2Fcanary-provider-cloud%2C%40getcanary%2Fweb%40latest%2Fcomponents%2Fcanary-search%2C%40getcanary%2Fweb%40latest%2Fcomponents%2Fcanary-search-input%2C%40getcanary%2Fweb%40latest%2Fcomponents%2Fcanary-search-results%2C%40getcanary%2Fweb%40latest%2Fcomponents%2Fcanary-modal%2C%40getcanary%2Fweb%40latest%2Fcomponents%2Fcanary-content%2C%40getcanary%2Fweb%40latest%2Fcomponents%2Fcanary-trigger-searchbar&treeshake=%5B*%5D%2C%5B*%5D%2C%5B*%5D%2C%5B*%5D%2C%5B*%5D%2C%5B*%5D%2C%5B*%5D) | [115 KB](https://bundlephobia.com/package/@docsearch/js@latest) |
+
+| _All_         | **Canary**                                                            | B                                                                  | C                                                                   | D                                                       |
+| ------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------ | ------------------------------------------------------------------- | ------------------------------------------------------- |
+| _Bundle Size_ | [**0.16 MB**](https://bundlephobia.com/package/@getcanary/web@latest) | [1.9 MB](https://bundlephobia.com/package/@inkeep/uikit-js@latest) | [0.75 MB](https://bundlephobia.com/package/@mendable/search@latest) | [0.87 MB](https://widget.kapa.ai/kapa-widget.bundle.js) |
 
 ## Modular and open-source
 
@@ -262,5 +276,5 @@ If you are working on a small project, using local providers like `canary-provid
 # Before you go
 
 - [Star us on GitHub](https://github.com/fastrepl/canary) to support,
-- Join our [Discord](https://discord.gg/canarydev) to ask questions,
+- [Join our Discord](https://discord.gg/canarydev) to keep in touch,
 - [Schedule a call](https://cal.com/yujonglee/canary) if you like to chat.
